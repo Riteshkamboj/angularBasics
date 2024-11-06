@@ -1,0 +1,23 @@
+<div class="signup-container">
+    <h2>Sign Up</h2>
+    <form class="signup-form" #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="cpassword" id="cpassword" name="cpassword" [(ngModel)]="confirmPassword" required>
+        </div>
+        <button type="submit">Sign Up</button>
+        <p>Already have account then, <a routerLink="/login">Login</a></p>
+    </form>
+</div>
