@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AlertService } from '../alert.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  constructor(private alertService: AlertService) {}
   username: string = "";
   email: string = "";
   password: string = "";
@@ -27,7 +29,7 @@ export class SignupComponent {
     console.log('Email: ' + this.email);
     console.log('Password: ' + this.password);
     
-    alert('You have successfully signed up!');
+    this.alertService.alertin("You have successfully signed up!");
     }
   }
 
